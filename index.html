@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<!-- USANDO TEMPLATES DO BOOTSTRAP
+Ao selecionar um template (modelo de site) no "www.startbootstrap", fazer:
+1. baixar na área de trabalho
+2. tirar do zip
+3. renomear a pasta ()
+4. apagar arquivos e pastas desnecessárias, tais como:
+4.1. arquivo "min.css"
+4.2. arquivos "packpage"
+4.3. arquivo "gulpfile.j"
+4.4. pasta "scss"
+4.5. arquivo ".travis.yml"
+4.6. arquivo "README.md"
+4.7. arquivo "LICENSE" -->
+
+<!-- INICIANDO UM NOVO PROJETO NO VSC
+Abrir Visual Studio Code
+Criar pasta na área de trabalho (desktop)
+Adicionar no VSC a pasta de trabalho (File/Add folder to workspace + selecionar pasta criada no desktop)
+Criar novo arquivo do tipo "index.html", em "Botão direito no UNTITLED (WORKSPACE)" -->
+
+<!-- OBSERVAÇÕES GERAIS
+Salvar clicando Ctrl+S (o arquivo já será salvo na pasta criada no desktop)
+OBSERVAÇÃO 1: Para inserir comentários (texto verde), basta digitar o texto, selecioná-lo e digitar Ctrl+:
+OBSERVAÇÃO 2: Para alinhar precisa selecionar Shift+Tab
+Mudar a linguagem da da página de "en" para "pt-br" -->
+
+<!-- MUDAR IMAGEM ORIGINAL DO TEMPLATE
+Encontrar imagem desejada (mais de 1000 pixels)
+  Salvar na pasta "img" do projeto
+F12 no site
+  Inspecionar o header na coluna principal (Elements)
+  Buscar o título do header na secundária (Styles), neste caso ".masthead"
+  Selecionar o título, com dois cliques
+  Copiar o título
+Abrir o arquivo css em "UNTITLED (WORKSPACE)"
+  Buscar (Ctrl+F)
+  Colar o título para buscar
+  Identificar oS urlS da imagem original do template, no caso aparece duas vezes (atenção)
+  Substituir o nome da imagem pela imagem desejada
+Salvar
+  Atualizar o site (F5) -->
+
+<!-- INSERIR VÍDEO DO YOUTUBE 
+  Editar no shoelace o arranjo desejado (12 colunas por linha)
+    Copiar código "arrow" do css resultantes (lembrar: divisão container tem margem)
+  Encontrar no cóodigo a seção onde deseja encaixar o vídeo
+    Colar código das "div" no css (uma div para cada vídeo)
+  Pesquisar na internet por bootstrap embed video
+    Copiar link do html
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+    </div>
+    Colar dentro de cada "div" de vídeo
+  Abrir vídeos desejados no YouTube
+    Solicitar "compartilhar" do vídeo
+    Solicitar "incorporar"
+    Copiar apenas o link "https", entre as aspas duplas do "src"
+  Voltar para o vivências
+    Substituir "https", após o "src=" -->
+
+<!-- PARA LINK DE OUTRO SITE ABRIR NUMA PÁGINA NOVA
+  Inserir target="_blank" antes do href="https:/...  -->
+
+<!-- DIRECIONAR TELEFONE PARA MENSAGENS WEB DO WHATSAPP
+  Criar código <a class="d-block small" target="_blank" href="https://api.whatsapp.com/send?phone=5575987-942-441&text=Olá,%20como%20posso%20te%20ajudar?">(75) 987-942-441</a>   -->
+
+<!-- DIRECIONAR ENDEREÇO PARA GOOGLE MAPAS
+Criar código <a class="d-block small" target="_blank" href="https://www.google.com.br/maps/place/R.+do+Cipreste,+399-301+-+Pituba,+Salvador+-+BA,+41820-390/@-12.9877409,-38.4639253,17z/data=!3m1!4b1!4m12!1m6!3m5!1s0x716053830dbe33f:0x740ae778421245db!2sCentro+Cultural+Desportivo+ACM+Brasil!8m2!3d-12.9491418!4d-38.4964169!3m4!1s0x7161b15c7f29e39:0xb166f7306abd627a!8m2!3d-12.9877409!4d-38.4620445">Rua do Cipestre, 399, Caminho das Árvores, Salvador-BA</a> -->
+
+
+<!-- CRIAR ICONE NA ABA DO SITE
+Remover fundo branco a partir do site http://www.online-image-editor.com/
+  Abrir imagem
+  Selecionar "converter PNG"
+  Selecionar aba wizard
+  Selecionar o diamente "transparência"
+  Clicar nos espaços que deseja eliminar o fundo
+  Salvar na pasta do projeto
+Converter imagem do PNG em ícone a partir do site https://www.favicon-generator.org/
+  Abrir imagem
+  Selecionar opção "Gere apenas 16x16 favicon.ico"
+  Baixar o favicon gerado
+  Copiar as linhas de comando do site
+          <link  rel = "ícone de atalho"  href = "img/favicon.png"  type = "imagem / x-ícone" > 
+          <link  rel = "icon"  href = "img/favicon.png"  type = "imagem / x-ícone" >
+  Colar a linha de comendo no html
+  Substituir nome do arquivo para o que está salvo na pasta do projeto
+  Abrir site numa nova aba -->
+
+
+
+
+
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Consultório de Psicanálise de Guiomar Sobral">
+  <meta name="author" content="Juan Sobral Studio">
+  <link  rel = "ícone de atalho"  href = "img/favicon.png"  type = "imagem / x-ícone" > 
+  <link  rel = "icon"  href = "img/favicon.png"  type = "imagem / x-ícone" >
+
+  <title>PSCICOLÓGICA</title>
+
+  <!-- Bootstrap coração CSS -->
+   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Customização de fontes para o template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Customização de estilos para o 'template'
+  Apagar o termo ".min", entre "grayscale" e "css" -->
+  <link href="css/grayscale.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Barra de navegação (Menu) -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">PscicoLÓGICA</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#method">Método</a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">Sobre</a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#references">Referências</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#signup">Marcação</a>
+          </li>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#contact">Contato</a>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+    <div class="container d-flex h-100 align-items-center">
+      <div class="mx-auto text-center">
+        <h1 class="mx-auto my-0 text-uppercase">Pscico-lógica</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5 olhe">Olhe para dentro, para as suas profundezas, aprenda primeiro a se conhecer.</h2>
+        <a href="#about" class="btn btn-primary js-scroll-trigger">Comece Agora!</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Seção Método -->
+  <section id="method" class="about-section text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-my col-lg-8 mx-auto">
+          <h2 class="text-white mb-4">PsicANÁLISE</h2>
+          <p class="text-white-40">É um método terapêutico empregado em casos de neurose e psicose. Consiste na interpretação dos conteúdos inconscientes de palavras, ações e produções imaginárias de uma pessoa, com base nas associações livres e na transferência 
+            <a target="_blank" href="https://www.febrapsi.org/">(Federação Brasileira de Psicanálise)</a>. A linha pscicoterapêutica do nosso consultório é denominada de "Lacaniana", a qual investiga os processos mentais do paciente por meio do relato de suas experiências. Não há cronologia determinada para que você (paciente) conte suas vivências, sendo que pode trazer para mim (terapeuta) o que considere como sendo mais importante para você. A partir disso, o seu diagnóstico será elaborado gradualmente, com o objetivo de procurar a origem de sofrimentos, anormalidades ou comprometimento de ordem psicológica. O número de sessões semanais é variado. Vou analisar o desenvolvimento da sua personalidade, além de tentar encontrar as motivações de suas atitudes atuais, visando te ajudar a melhorar sua vida!</p>
+        </div>
+      </div>
+      <img src="img/diva-8.png" class="img-fluid" alt="">
+    </div>
+  </section>
+
+  <!-- Seções Sobre -->
+  <section id="about" class="projects-section bg-light">
+    <div class="container">
+
+      <!-- Sobre Guiomar -->
+      <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-sm-12 col-md-3">
+          <img class="img-fluid mb-3 mb-lg-0 img-center" src="img/guiomar-1.jpg" alt="">
+        </div>
+        <div class="col-sm-12 col-md-9">
+          <div class="featured-text text-center text-lg-left">
+            <h4>Guiomar Sobral</h4>
+            <p class="metod-tex text-white-40 mb-0">Psicanalista, pedagoga, poliglota, mãe de três filhos bem criados, experiência de mais de 40 anos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seções Referências -->
+  <section id="references" class="projects-reference bg-light">
+      <div class="container">
+        <div class="row">
+            <div class="col-my col-lg-8 mx-auto">
+              <h2 class="text-black mb-4 titulo2">Referências</h2>
+              <hr class="d-none d-lg-block mb-0 ml-0 bar-prec">
+              <p class="text-black-40 titulo2">Acesse a história dos precursores do estudo da mente.</p>
+            </div>
+          </div>
+
+      <!-- 1º Jung -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/carl-jung.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <a target="_blank" href="https://pt.wikipedia.org/wiki/Carl_Gustav_Jung"><h4 class="text-white aut">Carl Jung</h4></a>
+                <p class="mb-0 text-white-50">Quem olha para fora sonha, quem olha para dentro desperta.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2º Freud -->
+      <div class="row justify-content-center no-gutters">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/sigmund-freud.jpg" alt="">
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-right">
+                <a target="_blank" href="https://pt.wikipedia.org/wiki/Sigmund_Freud"><h4 class="text-white aut">Sigmund Freud</h4></a>
+                <p class="mb-0 text-white-50">A voz do inconsciente é sutil, mas ela não descança até ser ouvida.</p>
+                <hr class="d-none d-lg-block mb-0 mr-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3º Lacan -->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6">
+          <img class="img-fluid" src="img/lacan-1.jpg" alt="">
+        </div>
+        <div class="col-lg-6">
+          <div class="bg-black text-center h-100 project">
+            <div class="d-flex h-100">
+              <div class="project-text w-100 my-auto text-center text-lg-left">
+                <a target="_blank" href="https://pt.wikipedia.org/wiki/Jacques_Lacan"><h4 class="text-white aut"> Jacques Lacan</h4></a>
+                <p class="mb-0 text-white-50">Amar é dar o que não se tem a alguém que não quer.</p>
+                <hr class="d-none d-lg-block mb-0 ml-0">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Vídeos -->
+  <section id="references" class="about-section text-center marg-sec-vid">
+    <div class="container marg-vid">
+      <div class="row">
+        <div class="col-my col-lg-10 mx-auto">
+          <h2 class="text-white mb-4">Vídeos</h2>
+          <hr class="d-none d-lg-block mb-0 ml-0 bar-vid">
+          <p class="text-white-40 titulo2">Assista alguns vídeos para conhecer um pouco como pensavam os precursores da Psicanálise.</p>
+        </div>
+      </div>
+      <div class="row marg-vid">
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/S-QtbFaZjmw" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/c6VpU5FfqT0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>  
+      <div class="row">
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-op3s6s-yw4" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/aRsk3zedzA0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </section>
+
+  <!-- Marcaçãode Consulta -->
+  <section id="signup" class="signup-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+          <h2 class="text-white mb-5">Marque aqui sua consulta!</h2>
+
+          <form class="form-inline d-flex">
+            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Digite seu Email, entraremos em contato...">
+            <button type="submit" class="btn btn-primary mx-auto">Enviar</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section class="contact-section bg-black" id="contact">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Endereço do Consultório</h4>
+              <hr class="my-4">
+              <a class="d-block small" target="_blank" href="https://www.google.com.br/maps/place/Tv.+Esperanto,+23+-+S%C3%A3o+Caetano,+Salvador+-+BA,+40390-800/@-12.9354193,-38.4795301,17.52z/data=!4m13!1m7!3m6!1s0x7161aa930858403:0x3edfe774ede2d424!2sTv.+Esperanto,+23+-+S%C3%A3o+Caetano,+Salvador+-+BA,+40390-800!3b1!8m2!3d-12.9354098!4d-38.4780827!3m4!1s0x7161aa930858403:0x3edfe774ede2d424!8m2!3d-12.9354098!4d-38.4780827">Travessa Esperanto, 23, São Caetano, Salvador-BA</a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">E-mail</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <a href="#">guiomarbarros@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">WhatsApp para Emergências</h4>
+              <hr class="my-4">
+              <a class="d-block small" target="_blank" href="https://api.whatsapp.com/send?phone=5571988-941-441&text=Olá,%20como%20posso%20te%20ajudar?">(71) 988-941-441</a>
+            </div>   
+            </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="social d-flex justify-content-center">
+        <a target="_blank" href="https://twitter.com/guiomarsobral" class="mx-2">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a target="_blank" href="https://www.facebook.com/guiomar.barros.58" class="mx-2">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/guiomar.barros.profa/?hl=pt-br" class="mx-2">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      Copyright &copy; Juan Sobral 2019
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/grayscale.min.js"></script>
+
+</body>
+
+</html>
