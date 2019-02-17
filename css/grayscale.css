@@ -378,7 +378,7 @@ footer {
 .my-left-line {
   border-color: #285CA5;
   border-width: 0.3rem;
-  width: 27%;
+  width: 20%;
 }
 
 .my-right-line {
@@ -389,4 +389,14 @@ footer {
 
 .my-marg-about {
   padding: 1rem 0;
+}
+
+.may-marg-method {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.my-marg-ref {
+  margin-left: 5%;
+  margin-right: 5%;
 }
