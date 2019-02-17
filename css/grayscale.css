@@ -366,3 +366,27 @@ footer {
 .projects-about {
   padding: 5rem 0;
 }
+
+.left-my {
+  margin-left: 5%;
+}
+
+.right-my {
+  margin-right: 5%;
+}
+
+.my-left-line {
+  border-color: #285CA5;
+  border-width: 0.3rem;
+  width: 27%;
+}
+
+.my-right-line {
+    border-color: #285CA5;
+    border-width: 0.3rem;
+    width: 27%;
+}
+
+.my-marg-about {
+  padding: 1rem 0;
+}
