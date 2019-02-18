@@ -175,7 +175,7 @@
 }
 
 .about-section {
-  padding-top: 10rem;
+  padding-top: 5rem;
   background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
   background: linear-gradient(to bottom, #161616 0%, #13223B 75%, #2E619C 100%);
 }
@@ -360,7 +360,7 @@ footer {
 }
 
 .projects-reference {
-  padding: 5rem 0;
+  padding: 2rem;
 }
 
 .projects-about {
@@ -388,7 +388,7 @@ footer {
 }
 
 .my-marg-about {
-  padding: 1rem 0;
+  padding: 8rem 0;
 }
 
 .may-marg-method {
